@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+    /* Colors */
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(218, 6%, 38%);
+    --Medium-Grey: #262f38;
+    --Dark-Blue: #1e252f;
+    --Very-Dark-Blue: #141519;
+
+    /* Font */
+    --Font-Family: 'Overpass', sans-serif;
+    --Font-Weight-Regular: 400;
+    --Font-Weight-Bold: 700;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.hide {
+    display: none !important;
+}
+
+body {
+    background-color: var(--Very-Dark-Blue);
+    font-family: var(--Font-Family);
+    min-height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+
+    & > div#Rating_container {
+        width: 350px;
+        padding: 1.5rem;
+        border-radius: 1.3rem;
+        background: var(--Dark-Blue);
+        display: grid;
+        gap: .8rem;
+
+        & > img {
+            background-color: var(--Medium-Grey);
+            padding: 0.5rem;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        & > h2 {
+            color: var(--White);
+            font-weight: var(--Font-Weight-Bold);
+        }
+
+        & > p {
+            color: var(--Light-Grey);
+            font-weight: var(--Font-Weight-Regular);
+        }
+
+        & > div.btns {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+
+            & > button#btn1, button#btn2, 
+            button#btn3, button#btn4, button#btn5 {
+                background: var(--Medium-Grey);
+                color: var(--Light-Grey);
+                font-weight: var(--Font-Weight-Bold);
+                border: none;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+            }
+            & > button#btn1:hover, button#btn2:hover, 
+            button#btn3:hover, button#btn4:hover, button#btn5:hover {
+                background: var(--Orange);
+                color: var(--White);
+            }
+        }
+
+        & > input {
+            background-color: var(--Orange);
+            border: none;
+            padding: 0.8rem;
+            border-radius: 2rem;
+            color: var(--White);
+            font-weight: var(--Font-Weight-Bold);
+            letter-spacing: 3px;
+            cursor: pointer;
+        }
+        & > input:hover {
+            background-color: var(--White);
+            color: var(--Orange);
+        }
+    }
+
+    & > div#Thanks_container {
+        background: var(--Dark-Blue);
+        width: 350px;
+        border-radius: 1.3rem;
+        & > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 2rem;
+            
+            
+            & > img {
+                margin-bottom: 23px;
+            }
+
+            & > h3 {
+                color: var(--Orange);
+                font-weight: var(--Font-Weight-Regular);
+                font-size: 13px;
+                background: var(--Medium-Grey);
+                border-radius: 1rem;
+                padding-left: 0.9rem;
+                padding-right: 0.9rem;
+                padding-top: 0.3rem;
+                padding-bottom: 0.3rem;
+                margin-bottom: 25px;
+            }
+
+            & > h2 {
+                color: var(--White);
+                margin-bottom: 13px;
+            }
+
+            & > p {
+                color: var(--Light-Grey);
+            }
+        }
+    }
+
+}
+
+
